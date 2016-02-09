@@ -3,7 +3,7 @@ djcelery.setup_loader()
 
 from project._settings import *
 
-
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 ALLOWED_HOSTS = ['*']
 
 
@@ -20,6 +20,7 @@ INSTALLED_APPS = (
     'djcelery',
     'multiselectfield',
     'solo',
+    'crispy_forms',
 
     # Project apps
     'project.apps.index',
