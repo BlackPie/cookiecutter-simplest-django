@@ -36,5 +36,5 @@ class SigninView(FormView):
 
 class SignupView(FormView):
     form_class = SignupForm
-    template_name = "apps/users/auth.html"
+    template_name = "apps/users/signup.html"
     success_url = reverse_lazy('index')
