@@ -2,12 +2,11 @@
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth import logout, login
-from django.core.urlresolvers import reverse_lazy
-from django.contrib.auth.forms import AuthenticationForm
 from django.views.generic import View, FormView
+from django.core.urlresolvers import reverse_lazy
 
 from project.apps.index.views import LoginRequiredMixin
-from project.apps.users.forms import SignupForm
+from project.apps.users.forms import SignupForm, SigninForm
 
 
 class LogoutView(LoginRequiredMixin, View):
@@ -17,7 +16,7 @@ class LogoutView(LoginRequiredMixin, View):
 
 
 class SigninView(FormView):
-    form_class = AuthenticationForm
+    form_class = SigninForm
     template_name = "apps/users/signin.html"
     success_url = reverse_lazy('index')
 

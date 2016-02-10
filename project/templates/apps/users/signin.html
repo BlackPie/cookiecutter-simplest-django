@@ -2,10 +2,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <div class="headline">
-    <form enctype="multipart/form-data" action="" method="post" role="form">{% csrf_token %}
-      {{ form|crispy }}
-      <input type="submit" value="Sign In" />
-    </form>
-  </div>
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+          <div class="first_row">
+            <h1>Sign In</h1>
+          </div>
+            <div class="form-group">
+              {% crispy form %}
+            </div>
+      </div>
+    </div>
 {% endblock %}
