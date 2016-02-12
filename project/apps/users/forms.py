@@ -15,7 +15,7 @@ class SignupForm(forms.Form):
     password2 = forms.CharField(label=_("Password again"), max_length=30, widget=forms.PasswordInput())
     email = forms.EmailField(label=_("Email"), required=False)
 
-    0 = FormHelper()
+    helper = FormHelper()
     helper.form_method = 'POST'
     helper.form_action = reverse_lazy('signup')
     helper.layout = Layout(

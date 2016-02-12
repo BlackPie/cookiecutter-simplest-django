@@ -1,7 +1,7 @@
 import djcelery
 djcelery.setup_loader()
 
-from project._settings import *
+from project.settings._settings import *
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 ALLOWED_HOSTS = ['*']
@@ -16,11 +16,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # third party apps
-    'debug_toolbar',
     'djcelery',
     'multiselectfield',
     'solo',
     'crispy_forms',
+    'django_extensions',
 
     # Project apps
     'project.apps.index',
