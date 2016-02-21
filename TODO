@@ -7,3 +7,4 @@
 [ ] sh set up scripts
 [ ] check celery
 [ ] loading secret keys from env vars
+[ ] vagrantfile + bootstrab.sh

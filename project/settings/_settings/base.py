@@ -1,8 +1,7 @@
-import os
+import environ
 
 
-PROJECT_PATH = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = environ.Path(__file__) - 3
 
 ROOT_URLCONF = 'project.urls'
 

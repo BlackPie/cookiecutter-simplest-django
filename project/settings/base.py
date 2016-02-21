@@ -3,6 +3,7 @@ djcelery.setup_loader()
 
 from project.settings._settings import *
 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 ALLOWED_HOSTS = ['*']
 
