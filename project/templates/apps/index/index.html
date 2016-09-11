@@ -1,9 +1,22 @@
 {% extends "base.html" %}
+{% load waffle_tags %}
 
 {% block content %}
   <section>
     <div class="row">
         <div class="welcome">
+          {% flag "homepage1" %}
+            <h1>First homepage loaded!</h1>
+          {% endflag %}
+
+          {% flag "homepage2" %}
+            <h1>Second homepage loaded!!</h1>
+          {% endflag %}
+
+          {% flag "homepage3" %}
+            <h1>Third homepage loaded!!!</h1>
+          {% endflag %}
+
           <h1>Welcome to the project!</h1>
           <p class="lead">
              This is just created Django project from custom cookiecutter template.

@@ -22,6 +22,7 @@ INSTALLED_APPS = (
     'solo',
     'crispy_forms',
     'django_extensions',
+    'waffle',
 
     # Project apps
     'project.apps.index',
